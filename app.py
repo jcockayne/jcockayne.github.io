@@ -58,7 +58,7 @@ papers = [
 		"On the Bayesian Solution of Differential Equations",
 		[authors["junyang"], authors["jon"], authors["chris"]],
 		2017,
-		"1706.03369",
+		"1805.07109",
 		"Proceedings of the 38th International Workshop on Bayesian Inference and Maximum Entropy Methods in Science and Engineering"
 	),
 	PublishedPaper(

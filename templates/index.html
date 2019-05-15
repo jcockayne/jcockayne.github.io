@@ -70,20 +70,16 @@
 					<div class="paper">
 						<b style="font-size: 1.1em;">{{ paper.name }} </b>
 						<br/>
-						<i class="fa fa-user left-icon"></i>
-						<em>
-							<span>
-								{% for author in paper.authors %}
-									<a
+						<i class="fa fa-user left-icon"></i><em>{% for author in paper.authors %}<a
 									{% if author.website is not none %} href="{{author.website}}" {% endif %}
 									{% if author.is_me %} style="font-weight: bold" {% endif %}
 									>{{ author.name }}</a>{% if not loop.last %},{% endif %}
 								{% endfor %}
-							</span>
 						<br/>
 						</em>
-						<i class="fa fa-book left-icon" ></i>
-						{{paper.journal}}, {{paper.year}}{% if paper.note is not none %}, <em>{{ paper.note }}</em> {% endif %}
+						<i class="fa fa-book left-icon" ></i>{{paper.journal}}, {{paper.year}}{% if paper.note is not none %}, <em>{{ paper.note }}</em> {% endif %}
+						<br />
+						<a href="https://arxiv.org/abs/{{paper.arxiv_id}}"><i class="fa fa-globe left-icon"></i><tt>arXiv</tt></a>
 					</div>
 				</div>
 			</div>
