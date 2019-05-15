@@ -1,0 +1,166 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Jon Cockayne</title>
+  </head>
+  <body>
+  	<div class="container-fluid bg-light top-panel">
+  		<div class="row" style="min-height: 10px"></div>
+  		<div class="row">
+  			<div class="col-md-4">
+  				<img src="{{ url_for('static', filename='img/me-300.jpg') }}" class="img-fluid header-img mx-auto d-block" />
+  			</div>
+  			<div class="col-md-6 my-auto">
+  				<h1>
+  					Jon Cockayne
+  				</h1>
+  				<hr/>
+  				<h3>
+  					PhD Student at University of Warwick
+  				</h3>
+  			</div>
+  		</div>
+  		<div class="row" style="min-height: 10px"></div>
+  	</div>
+    <nav id='nav' class="navbar navbar-expand-sm navbar-light bg-light">
+	  <!--<a class="navbar-brand" href="#">Navbar</a>-->
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#papers">Papers</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#talks">Talks</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#software">Software</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<div class="container-fluid main-container" style="max-width: 1000px;">
+		<a id="papers"></a>
+		<div style="height: 10px"></div>
+		<div class="row">
+			<div class="col-md-12">
+				<h1>
+					Papers
+				</h1>
+				<hr />
+			</div>
+		</div>
+		{% for paper in papers %}
+			<div class="row">
+				<div class="col-md-12">
+					<div class="paper">
+						<b style="font-size: 1.1em;">{{ paper.name }} </b>
+						<br/>
+						<i class="fa fa-user left-icon"></i>
+						<em>
+							<span>
+								{% for author in paper.authors %}
+									<a
+									{% if author.website is not none %} href="{{author.website}}" {% endif %}
+									{% if author.is_me %} style="font-weight: bold" {% endif %}
+									>{{ author.name }}</a>{% if not loop.last %},{% endif %}
+								{% endfor %}
+							</span>
+						<br/>
+						</em>
+						<i class="fa fa-book left-icon" ></i>
+						{{paper.journal}}, {{paper.year}}{% if paper.note is not none %}, <em>{{ paper.note }}</em> {% endif %}
+					</div>
+				</div>
+			</div>
+			{% if not loop.last %}
+			<div class="sep-icon">
+				<i class="fa fa-flask" style="color: lightgray"></i>
+			</div>
+			{% endif %}
+		{% endfor %}
+		<div class="bottom-sep"></div>
+		<a id="talks"></a>
+		<div style="height: 10px"></div>
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Talks</h1>
+				<hr />
+			</div>
+		</div>
+		{% for talk in talks %}
+			<div class="row">
+				<div class="col-md-12">
+					<div class="talk">
+						<i class="fa fa-globe left-icon"></i><b>{{talk.where}}</b><br/>
+						<i class="fa fa-calendar left-icon"></i>{{ talk.when }}
+					</div>
+				</div>
+			</div>
+			{% if not loop.last %}
+			<div class="sep-icon">
+				<i class="fa fa-microphone" style="color: lightgray"></i>
+			</div>
+			{% endif %}
+		{% endfor %}
+		<div class="bottom-sep"></div>
+		<a id="software"></a>
+		<div style="height: 10px"></div>
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Software</h1>
+				<hr />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				Please visit my <a href="https://github.com/jcockayne">github</a> to find all of the software that I have made available from my research.
+			</div>
+		</div>
+		<div style="height: 20px"></div>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Libraries</h3>
+
+				<a href="https://github.com/jcockayne/bayesian_pdes"><i class="fab fa-github left-icon"></i><tt>bayesian_pdes</tt></a><br />
+				Implementation of the PDE solver from "Probabilistic Meshless Methods".<br/>
+				<a href="https://github.com/jcockayne/bcg"><i class="fab fa-github left-icon"></i><tt>BCG</tt></a><br/>
+				An implementation of the BayesCG algorithm from "A Bayesian Conjugate Gradient Method".<br/>
+				<a href="https://github.com/jcockayne/mcmc"><i class="fab fa-github left-icon"></i><tt>mcmc</tt></a><br/>
+				Implementations of various MCMC routines in pure Python.<br/>
+				<a href="https://github.com/jcockayne/cmcmc"><i class="fab fa-github left-icon"></i><tt>cmcmc</tt></a><br/>
+				Implementations of various MCMC routines in C++.<br/>
+
+				<div class="bottom-sep"></div>
+				<h3>Code from Papers</h3>
+				<a href="https://github.com/jcockayne/hydrocyclone_code"><i class="fab fa-github left-icon"></i><tt>hydrocyclone_code</tt></a><br/>
+				Code for reproducing results from "Bayesian PNM for Industrial Hydrocyclone Equipment".<br/>
+				<div class="bottom-sep"></div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
