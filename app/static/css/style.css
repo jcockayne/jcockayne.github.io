@@ -17,11 +17,12 @@ img.header-img {
 }
 
 .bg-light {
-	background-color: #e3fbe3!important;
+	background-color: #f2f4fa!important;
 }
 
 .navbar {
 	border-bottom: 1px solid lightgray;
+	position: -webkit-sticky;
 	position: sticky; 
 	top: 0; 
 	z-index: 1; 
