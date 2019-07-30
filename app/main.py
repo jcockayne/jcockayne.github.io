@@ -71,9 +71,8 @@ papers = [
 ]
 
 talks = [
-	Talk(where="James H. Wilkinson Workshop, Manchester University", when="29-30 May 2019"),
-	Talk(where="Potsdam University", when="21 June 2019"),
-	Talk(where="SciCADE 2019", when="22-26 July 2019")
+	Talk(where="Alan Turing Institute, UK", when="11 September 2019"),
+	Talk(where="Reading University", when="9 October 2019")
 ]
 
 
