@@ -114,7 +114,13 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="talk">
-						<i class="fa fa-globe left-icon"></i><b>{{talk.where}}</b><br/>
+						<span>
+							<i class="fa fa-globe left-icon"></i><b>{{talk.where}}</b>
+							{%if talk.topic is not none %}
+								({{ talk.topic }})
+							{% endif %}
+						</span>
+						<br/>
 						<i class="fa fa-calendar left-icon"></i>{{ talk.when }}
 					</div>
 				</div>

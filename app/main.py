@@ -83,8 +83,8 @@ papers = [
 ]
 
 talks = [
-	Talk(where="Alan Turing Institute, UK", when="11 September 2019"),
-	Talk(where="Reading University", when="9 October 2019")
+	Talk(where="Alan Turing Institute, UK", when="11 September 2019", topic="Data Centric Engineering reading group"),
+	Talk(where="Reading University", when="9 October 2019", topic="Data Assimilation Research Group seminar")
 ]
 
 

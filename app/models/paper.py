@@ -41,6 +41,7 @@ class Author(object):
 	
 
 class Talk(object):
-	def __init__(self, where, when):
+	def __init__(self, where, when, topic=None):
 		self.where = where
 		self.when = when
+		self.topic = topic
