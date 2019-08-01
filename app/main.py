@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template
 from models.paper import *
+import model_transformations
 app = Flask("personal_website")
 
 authors = {
@@ -16,13 +17,24 @@ authors = {
 	"junyang": Author("Junyang", "Wang", "https://www.turing.ac.uk/node/1982")
 }
 papers = [
+	Paper(
+		"A Role for Symmetry in the Bayesian Solution of Differential Equations",
+		[authors["junyang"], authors["jon"], authors["chris"]],
+		2019,
+		"1906.10564"
+	),
+	Paper(
+		"Probabilistic Numerical Methods for Partial Differential Equations and Bayesian Inverse Problems",
+		[authors["jon"], authors["chris"], authors["tim"], authors["mark"]],
+		2017,
+		"1605.07811"
+	),
 	PublishedPaper(
 		"A Bayesian Conjugate Gradient Method",
 		[authors["jon"], authors["chris"], authors["ilse"], authors["mark"]],
 		2019,
 		"1801.05242",
 		"Bayesian Analysis",
-		note="to appear with rejoinder",
 	),
 	PublishedPaper(
 		"Bayesian Probabilistic Numerical Methods",
@@ -78,7 +90,8 @@ talks = [
 
 @app.route("/")
 def main():
-	return render_template("index.html", papers=papers, talks=talks)
+	grouped_papers = model_transformations.group_papers(papers)
+	return render_template("index.html", grouped_papers=grouped_papers, talks=talks)
 
 
 if __name__ == '__main__':

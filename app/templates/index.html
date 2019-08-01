@@ -55,7 +55,7 @@
 	</nav>
 	<div class="container-fluid main-container" style="max-width: 1000px;">
 		<a id="papers"></a>
-		<div style="height: 10px"></div>
+		<div style="height: 50px"></div>
 		<div class="row">
 			<div class="col-md-12">
 				<h1>
@@ -64,32 +64,44 @@
 				<hr />
 			</div>
 		</div>
-		{% for paper in papers %}
-			<div class="row">
-				<div class="col-md-12">
-					<div class="paper">
-						<b style="font-size: 1.1em;">{{ paper.name }} </b>
-						<br/>
-						<i class="fa fa-user left-icon"></i><em>{% for author in paper.authors %}<a
-									{% if author.website is not none %} href="{{author.website}}" {% endif %}
-									{% if author.is_me %} style="font-weight: bold" {% endif %}
-									>{{ author.name }}</a>{% if not loop.last %},{% endif %}
-								{% endfor %}
-						<br/>
-						</em>
-						<i class="fa fa-book left-icon" ></i>{{paper.journal}}, {{paper.year}}{% if paper.note is not none %}, <em>{{ paper.note }}</em> {% endif %}
-						<br />
-						<a href="https://arxiv.org/abs/{{paper.arxiv_id}}"><i class="fa fa-globe left-icon"></i><tt>arXiv</tt></a>
+		{% for group, papers in grouped_papers %}
+			{% if papers|length %}
+				<div class="row">
+					<div class="col-md-12">
+						<h3>{{group}}</h3>
+						<hr />
 					</div>
 				</div>
-			</div>
-			{% if not loop.last %}
-			<div class="sep-icon">
-				<i class="fa fa-flask" style="color: lightgray"></i>
-			</div>
+				{% for paper in papers %}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="paper">
+								<b style="font-size: 1.1em;">{{ paper.name }} </b>
+								<br/>
+								<i class="fa fa-user left-icon"></i><em>{% for author in paper.authors %}<a
+											{% if author.website is not none %} href="{{author.website}}" {% endif %}
+											{% if author.is_me %} style="font-weight: bold" {% endif %}
+											>{{ author.name }}</a>{% if not loop.last %},{% endif %}
+										{% endfor %}
+								</em>
+								{% if paper.journal is defined %}
+								<br/>
+								<i class="fa fa-book left-icon" ></i>{{paper.journal}}{% if paper.note is not none %}, <em>{{ paper.note }}</em> {% endif %}
+								{% endif %}
+								<br />
+								<a href="https://arxiv.org/abs/{{paper.arxiv_id}}"><i class="fa fa-globe left-icon"></i><tt>arXiv</tt></a>
+							</div>
+						</div>
+					</div>
+					{% if not loop.last %}
+					<div class="sep-icon">
+						<i class="fa fa-flask" style="color: lightgray"></i>
+					</div>
+					{% endif %}
+				{% endfor %}
+				<div class="bottom-sep"></div>
 			{% endif %}
 		{% endfor %}
-		<div class="bottom-sep"></div>
 		<a id="talks"></a>
 		<div style="height: 10px"></div>
 		<div class="row">
