@@ -89,7 +89,10 @@
 								<i class="fa fa-book left-icon" ></i>{{paper.journal}}{% if paper.note is not none %}, <em>{{ paper.note }}</em> {% endif %}
 								{% endif %}
 								<br />
-								<a href="https://arxiv.org/abs/{{paper.arxiv_id}}"><i class="fa fa-globe left-icon"></i><tt>arXiv</tt></a>
+								<a href="https://arxiv.org/abs/{{paper.arxiv_id}}" class="btn btn-light"><tt>arXiv</tt></a>
+								{% if paper.journal_website is defined and paper.journal_website is not none %}
+								<a href="{{paper.journal_website}}" class="btn btn-light"><tt>journal</tt></a>
+								{% endif %}
 							</div>
 						</div>
 					</div>

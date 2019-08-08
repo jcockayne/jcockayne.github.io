@@ -35,6 +35,7 @@ papers = [
 		2019,
 		"1801.05242",
 		"Bayesian Analysis",
+		journal_website="https://projecteuclid.org/euclid.ba/1558144846"
 	),
 	PublishedPaper(
 		"Bayesian Probabilistic Numerical Methods",
@@ -49,7 +50,8 @@ papers = [
 		[authors["chris"], authors["jon"], authors["robert"], authors["mark"]],
 		2019,
 		"1707.06107",
-		"Journal of the American Statistical Association"
+		"Journal of the American Statistical Association",
+		journal_website="https://www.tandfonline.com/doi/full/10.1080/01621459.2019.1574583"
 	),
 	PublishedPaper(
 		"Probabilistic Linear Solvers: A Unifying View",
@@ -64,7 +66,8 @@ papers = [
 		[authors["chris"], authors["jon"], authors["fx"], authors["mark"]],
 		2019,
 		"1603.03220",
-		"Bernoulli"
+		"Bernoulli",
+		journal_website="https://projecteuclid.org/euclid.bj/1551862846"
 	),
 	PublishedPaper(
 		"On the Bayesian Solution of Differential Equations",
@@ -78,7 +81,8 @@ papers = [
 		[authors["jon"], authors["chris"], authors["tim"], authors["mark"]],
 		2016,
 		"1701.04006",
-		"Proceedings of the 38th International Workshop on Bayesian Inference and Maximum Entropy Methods in Science and Engineering"
+		"Proceedings of the 38th International Workshop on Bayesian Inference and Maximum Entropy Methods in Science and Engineering",
+		journal_website="https://aip.scitation.org/doi/abs/10.1063/1.4985359"
 	)
 ]
 

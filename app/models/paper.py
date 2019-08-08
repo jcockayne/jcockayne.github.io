@@ -4,7 +4,7 @@ class Paper(object):
 		authors,
 		year,
 		arxiv_id,
-		note=None
+		note=None,
 	):
 		self.name = name
 		self.authors = authors
@@ -21,11 +21,13 @@ class PublishedPaper(Paper):
 		year,
 		arxiv_id,
 		journal,
+		journal_website=None,
 		note=None,
 	):
 		super(PublishedPaper, self).__init__(name, authors, year, arxiv_id, note=note)
 		self.is_published = True
 		self.journal = journal
+		self.journal_website = journal_website
 
 
 class Author(object):
