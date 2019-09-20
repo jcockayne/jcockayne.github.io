@@ -67,8 +67,11 @@
 		{% for group, papers in grouped_papers %}
 			{% if papers|length %}
 				<div class="row">
-					<div class="col-md-2" >
+					<div class="col-md-2 d-none d-md-block" >
 						<h3 class="year-label" style="width: 100%; text-align:right">{{group}}</h3>
+					</div>
+					<div class="col-md-2 d-md-none">
+						<h3 style="width: 100%">{{group}}</h3>
 					</div>
 					<div class="col-md-10">
 					{% for paper in papers %}
