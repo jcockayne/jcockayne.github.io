@@ -91,10 +91,18 @@
 									<i class="fa fa-book left-icon" ></i>{{paper.journal}}{% if paper.note is not none %}, <em>{{ paper.note }}</em> {% endif %}
 									{% endif %}
 									<br />
-									<a href="https://arxiv.org/abs/{{paper.arxiv_id}}" class="btn btn-light"><tt>arXiv</tt></a>
+									<a href="https://arxiv.org/abs/{{paper.arxiv_id}}" class="btn btn-light"><tt><i class="far fa-file-pdf"></i> arXiv</tt></a>
 									{% if paper.journal_website is defined and paper.journal_website is not none %}
-									<a href="{{paper.journal_website}}" class="btn btn-light"><tt>journal</tt></a>
+									<a href="{{paper.journal_website}}" class="btn btn-light"><tt><i class="fas fa-book"></i> journal</tt></a>
 									{% endif %}
+									{% for link in paper.other_links %}
+										<a href="{{link.url}}" class="btn btn-light">
+											<tt>
+												{% if link.icon is not none %}<i class="{{link.icon}}"></i> {% endif %}
+												{{link.text}}
+											</tt>
+										</a>
+									{% endfor %}
 								</div>
 							</div>
 						</div>
@@ -113,7 +121,7 @@
 		<div style="height: 10px"></div>
 		<div class="row">
 			<div class="col-md-12">
-				<h1>Talks</h1>
+				<h1>Upcoming Talks</h1>
 				<hr />
 			</div>
 		</div>

@@ -17,11 +17,13 @@ authors = {
 	"junyang": Author("Junyang", "Wang", "https://www.turing.ac.uk/node/1982")
 }
 papers = [
-	Paper(
+	PublishedPaper(
 		"A Role for Symmetry in the Bayesian Solution of Differential Equations",
 		[authors["junyang"], authors["jon"], authors["chris"]],
 		2019,
-		"1906.10564"
+		"1906.10564",
+		"Bayesian Analysis",
+		note="to appear"
 	),
 	Paper(
 		"Probabilistic Numerical Methods for Partial Differential Equations and Bayesian Inverse Problems",
@@ -35,7 +37,11 @@ papers = [
 		2019,
 		"1801.05242",
 		"Bayesian Analysis",
-		journal_website="https://projecteuclid.org/euclid.ba/1558144846"
+		journal_website="https://projecteuclid.org/euclid.ba/1558144846",
+		note="with discussion and rejoinder",
+		other_links=[
+			PaperLink("https://www.youtube.com/watch?v=RDTOaPtxAXU", "BA Webinar", "fab fa-youtube")
+		]
 	),
 	PublishedPaper(
 		"Bayesian Probabilistic Numerical Methods",
@@ -87,7 +93,6 @@ papers = [
 ]
 
 talks = [
-	Talk(where="Webinar", when="2 October 2019", topic="A Bayesian Conjugate Gradient Method: Author Responses"),
 	Talk(where="Reading University", when="9 October 2019", topic="Data Assimilation Research Group seminar")
 ]
 
