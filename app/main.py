@@ -65,7 +65,7 @@ papers = [
 		2019,
 		"1810.03398",
 		"Statistics and Computing",
-		note="to appear"
+		journal_website="https://link.springer.com/article/10.1007/s11222-019-09897-7"
 	),
 	PublishedPaper(
 		"Convergence Rates for a Class of Estimators Based on Stein's Method",
