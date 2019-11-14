@@ -49,7 +49,7 @@ papers = [
 		2019,
 		"1702.03673",
 		"SIAM Review",
-		note="to appear",
+		journal_website="https://epubs.siam.org/doi/abs/10.1137/17M1139357",
 	),
 	PublishedPaper(
 		"Bayesian Probabilistic Numerical Methods in Time-Dependent State Estimation for Industrial Hydrocyclone Equipment",
