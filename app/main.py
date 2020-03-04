@@ -93,7 +93,7 @@ papers = [
 ]
 
 talks = [
-	Talk(where="Reading University", when="9 October 2019", topic="Data Assimilation Research Group seminar")
+	Talk(where="RSS 2020", when="7-10 September 2020")
 ]
 
 
