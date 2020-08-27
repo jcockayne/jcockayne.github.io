@@ -16,10 +16,17 @@ authors = {
 	"marina": Author("Marina", "Riabiz", "https://www.kcl.ac.uk/people/marina-riabiz"),
 	"pawel": Author("Pawel", "Swietach", "https://www.dpag.ox.ac.uk/team/pawel-swietach"),
 	"steve": Author("Steven", "Niederer", "https://www.kcl.ac.uk/people/steven-niederer"),
-	"lester": Author("Lester", "Mackey", "https://web.stanford.edu/~lmackey/")
+	"lester": Author("Lester", "Mackey", "https://web.stanford.edu/~lmackey/"),
+	"tim_reid": Author("Tim", "Reid", "https://math.sciences.ncsu.edu/people/twreid/")
 }
 
 papers = [
+	Paper(
+		"A Probabilistic Numerical Extension of the Conjugate Gradient Method",
+		[authors["tim_reid"], authors["ilse"], authors["jon"], authors["chris"]],
+		2020,
+		"2008.03225"
+	),
 	Paper(
 		"Optimal Thinning of MCMC Output",
 		[authors["marina"], authors["wilson"], authors["jon"], authors["pawel"], authors["steve"], authors["lester"], authors["chris"]],
