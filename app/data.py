@@ -17,10 +17,16 @@ authors = {
 	"pawel": Author("Pawel", "Swietach", "https://www.dpag.ox.ac.uk/team/pawel-swietach"),
 	"steve": Author("Steven", "Niederer", "https://www.kcl.ac.uk/people/steven-niederer"),
 	"lester": Author("Lester", "Mackey", "https://web.stanford.edu/~lmackey/"),
-	"tim_reid": Author("Tim", "Reid", "https://math.sciences.ncsu.edu/people/twreid/")
+	"tim_reid": Author("Tim", "Reid", "https://math.sciences.ncsu.edu/people/twreid/"),
+	"andrew": Author("Andrew", "Duncan", "http://wwwf.imperial.ac.uk/~aduncan/")
 }
 
 papers = [
+	Paper("Probabilistic Gradients for Fast Calibration of Differential Equation Models",
+		[authors["jon"], authors["andrew"]],
+		2020,
+		"2009.04239"
+	),
 	Paper(
 		"A Probabilistic Numerical Extension of the Conjugate Gradient Method",
 		[authors["tim_reid"], authors["ilse"], authors["jon"], authors["chris"]],
