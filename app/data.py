@@ -18,10 +18,23 @@ authors = {
 	"steve": Author("Steven", "Niederer", "https://www.kcl.ac.uk/people/steven-niederer"),
 	"lester": Author("Lester", "Mackey", "https://web.stanford.edu/~lmackey/"),
 	"tim_reid": Author("Tim", "Reid", "https://math.sciences.ncsu.edu/people/twreid/"),
-	"andrew": Author("Andrew", "Duncan", "http://wwwf.imperial.ac.uk/~aduncan/")
+	"andrew": Author("Andrew", "Duncan", "http://wwwf.imperial.ac.uk/~aduncan/"),
+	"matt": Author("Matthew", "Graham", "https://matt-graham.github.io/")
 }
 
 papers = [
+	Paper(
+		"Testing whether a Learning Procedure is Calibrated",
+		[authors["jon"], authors["matt"], authors["chris"], authors["tim"]],
+		2020,
+		"2012.12670"
+	),
+	Paper(
+		"Probabilistic Iterative Methods for Linear Systems",
+		[authors["jon"], authors["ilse"], authors["chris"], authors["tim_reid"]],
+		2020,
+		"2012.12615"
+	),
 	Paper("Probabilistic Gradients for Fast Calibration of Differential Equation Models",
 		[authors["jon"], authors["andrew"]],
 		2020,
