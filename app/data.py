@@ -19,10 +19,19 @@ authors = {
 	"lester": Author("Lester", "Mackey", "https://web.stanford.edu/~lmackey/"),
 	"tim_reid": Author("Tim", "Reid", "https://math.sciences.ncsu.edu/people/twreid/"),
 	"andrew": Author("Andrew", "Duncan", "http://wwwf.imperial.ac.uk/~aduncan/"),
-	"matt": Author("Matthew", "Graham", "https://matt-graham.github.io/")
+	"matt": Author("Matthew", "Graham", "https://matt-graham.github.io/"),
+	"toni": Author("Toni", "Karvonen", "https://tskarvone.github.io/"),
+	"filip": Author("Filip", "Tronarp", "https://scholar.google.fi/citations?user=q0rtB0EAAAAJ&hl=sv"),
+	"simo": Author("Simo", "Särkkä", "https://users.aalto.fi/~ssarkka/")
 }
 
 papers = [
+	Paper(
+		"A Probabilistic Taylor Expansion with Applications in Filtering and Differential Equations",
+		[authors["toni"], authors["jon"], authors["filip"], authors["simo"]],
+		2021,
+		"2102.00877"
+	),
 	Paper(
 		"Testing whether a Learning Procedure is Calibrated",
 		[authors["jon"], authors["matt"], authors["chris"], authors["tim"]],
