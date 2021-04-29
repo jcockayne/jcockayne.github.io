@@ -22,10 +22,16 @@ authors = {
 	"matt": Author("Matthew", "Graham", "https://matt-graham.github.io/"),
 	"toni": Author("Toni", "Karvonen", "https://tskarvone.github.io/"),
 	"filip": Author("Filip", "Tronarp", "https://scholar.google.fi/citations?user=q0rtB0EAAAAJ&hl=sv"),
-	"simo": Author("Simo", "Särkkä", "https://users.aalto.fi/~ssarkka/")
+	"simo": Author("Simo", "Särkkä", "https://users.aalto.fi/~ssarkka/"),
+	"oksana": Author("Oksana", "Chkrebtii", "https://www.asc.ohio-state.edu/chkrebtii.1/research.html")
 }
 
 papers = [
+	Paper("Bayesian Numerical Methods for Nonlinear Partial Differential Equations",
+		[authors["junyang"], authors["jon"], authors["oksana"], authors["tim"], authors["chris"]], 
+		2021,
+		"2104.12587"
+	),
 	Paper(
 		"A Probabilistic Taylor Expansion with Applications in Filtering and Differential Equations",
 		[authors["toni"], authors["jon"], authors["filip"], authors["simo"]],
