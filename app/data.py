@@ -27,11 +27,6 @@ authors = {
 }
 
 papers = [
-	Paper("Bayesian Numerical Methods for Nonlinear Partial Differential Equations",
-		[authors["junyang"], authors["jon"], authors["oksana"], authors["tim"], authors["chris"]], 
-		2021,
-		"2104.12587"
-	),
 	Paper(
 		"A Probabilistic Taylor Expansion with Applications in Filtering and Differential Equations",
 		[authors["toni"], authors["jon"], authors["filip"], authors["simo"]],
@@ -44,28 +39,37 @@ papers = [
 		2020,
 		"2012.12670"
 	),
-	Paper(
-		"Probabilistic Iterative Methods for Linear Systems",
-		[authors["jon"], authors["ilse"], authors["chris"], authors["tim_reid"]],
-		2020,
-		"2012.12615"
-	),
 	Paper("Probabilistic Gradients for Fast Calibration of Differential Equation Models",
 		[authors["jon"], authors["andrew"]],
 		2020,
 		"2009.04239"
 	),
 	Paper(
-		"A Probabilistic Numerical Extension of the Conjugate Gradient Method",
+		"BayesCG As An Uncertainty Aware Version of CG",
 		[authors["tim_reid"], authors["ilse"], authors["jon"], authors["chris"]],
-		2020,
+		2021,
 		"2008.03225"
 	),
-	Paper(
+	PublishedPaper(
+		"Probabilistic Iterative Methods for Linear Systems",
+		[authors["jon"], authors["ilse"], authors["chris"], authors["tim_reid"]],
+		2021,
+		"2012.12615",
+		"Journal of Machine Learning Research (to appear)"
+	),
+	PublishedPaper("Bayesian Numerical Methods for Nonlinear Partial Differential Equations",
+		[authors["junyang"], authors["jon"], authors["oksana"], authors["tim"], authors["chris"]], 
+		2021,
+		"2104.12587",
+		"Statistics and Computing",
+		journal_website="https://doi.org/10.1007/s11222-021-10030-w"
+	),
+	PublishedPaper(
 		"Optimal Thinning of MCMC Output",
 		[authors["marina"], authors["wilson"], authors["jon"], authors["pawel"], authors["steve"], authors["lester"], authors["chris"]],
-		2020,
-		"2005.03952"
+		2021,
+		"2005.03952",
+		"Journal of the Royal Statistical Society Series B (to appear)"
 	),
 	PublishedPaper(
 		"Optimality Criteria for Probabilistic Numerical Methods",
