@@ -49,7 +49,7 @@ papers = [
 		[authors["jon"], authors["andrew"]],
 		2021,
 		"2009.04239",
-		"SIAM Review (to appear)"
+		"SIAM Journal of Uncertainty Quantification (to appear)"
 	),
 	PublishedPaper(
 		"Probabilistic Iterative Methods for Linear Systems",
