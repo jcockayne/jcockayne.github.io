@@ -78,7 +78,7 @@ papers = [
 		2020,
 		"1901.04326",
 		"Multivariate Algorithms and Information-Based Complexity",
-		journal_website="https://www.degruyter.com/view/book/9783110635461/10.1515/9783110635461-005.xml"
+		journal_website="https://doi.org/10.1515/9783110635461-005"
 	),
 	PublishedPaper(
 		"A Role for Symmetry in the Bayesian Solution of Differential Equations",
@@ -86,7 +86,7 @@ papers = [
 		2020,
 		"1906.10564",
 		"Bayesian Analysis",
-		journal_website="https://projecteuclid.org/euclid.ba/1571191351"
+		journal_website="https://doi.org/10.1214/19-BA1183"
 	),
 	#Paper(
 	#	"Probabilistic Numerical Methods for Partial Differential Equations and Bayesian Inverse Problems",
@@ -100,7 +100,7 @@ papers = [
 		2019,
 		"1801.05242",
 		"Bayesian Analysis",
-		journal_website="https://projecteuclid.org/euclid.ba/1558144846",
+		journal_website="https://doi.org/10.1214/19-BA1145",
 		note="with discussion and rejoinder",
 		other_links=[
 			PaperLink("https://www.youtube.com/watch?v=RDTOaPtxAXU", "BA Webinar", "fab fa-youtube")
@@ -112,7 +112,7 @@ papers = [
 		2019,
 		"1702.03673",
 		"SIAM Review",
-		journal_website="https://epubs.siam.org/doi/abs/10.1137/17M1139357",
+		journal_website="https://doi.org/10.1137/17M1139357",
 	),
 	PublishedPaper(
 		"Bayesian Probabilistic Numerical Methods in Time-Dependent State Estimation for Industrial Hydrocyclone Equipment",
@@ -120,7 +120,7 @@ papers = [
 		2019,
 		"1707.06107",
 		"Journal of the American Statistical Association",
-		journal_website="https://www.tandfonline.com/doi/full/10.1080/01621459.2019.1574583"
+		journal_website="https://doi.org/10.1080/01621459.2019.1574583"
 	),
 	PublishedPaper(
 		"Probabilistic Linear Solvers: A Unifying View",
@@ -128,7 +128,7 @@ papers = [
 		2019,
 		"1810.03398",
 		"Statistics and Computing",
-		journal_website="https://link.springer.com/article/10.1007/s11222-019-09897-7"
+		journal_website="https://doi.org/10.1007/s11222-019-09897-7"
 	),
 	PublishedPaper(
 		"Convergence Rates for a Class of Estimators Based on Stein's Method",
@@ -136,7 +136,7 @@ papers = [
 		2019,
 		"1603.03220",
 		"Bernoulli",
-		journal_website="https://projecteuclid.org/euclid.bj/1551862846"
+		journal_website="https://doi.org/10.3150/17-BEJ1016"
 	),
 	PublishedPaper(
 		"On the Sampling Problem for Kernel Quadrature",
