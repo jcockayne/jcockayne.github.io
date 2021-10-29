@@ -1,3 +1,7 @@
+---
+layout: null
+title: Jon Cockayne
+---
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -7,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Jon Cockayne</title>
   </head>
@@ -16,7 +20,7 @@
   		<div class="row" style="min-height: 10px"></div>
   		<div class="row">
   			<div class="col-md-4">
-  				<img src="{{ url_for('static', filename='img/me-300.jpg') }}" class="img-fluid header-img mx-auto d-block" />
+  				<img src="img/me-300.jpg" class="img-fluid header-img mx-auto d-block" />
   			</div>
   			<div class="col-md-6 my-auto">
   				<h1>
@@ -67,41 +71,40 @@
 				<hr />
 			</div>
 		</div>
-		{% for group, papers in grouped_papers %}
-			{% if papers|length %}
+		{% for group in site.data.papers %}
 				<div class="row">
 					<div class="col-md-2 d-none d-md-block" >
-						<h3 class="year-label" style="width: 100%; text-align:right">{{group}}</h3>
+						<h3 class="year-label" style="width: 100%; text-align:right">{{group.title}}</h3>
 					</div>
 					<div class="col-md-2 d-md-none">
-						<h3 style="width: 100%">{{group}}</h3>
+						<h3 style="width: 100%">{{group.title}}</h3>
 					</div>
 					<div class="col-md-10">
-					{% for paper in papers %}
+					{% for paper in group.papers %}
 						<div class="row">
 							<div class="col-md-12">
 								<div class="paper">
 									<b style="font-size: 1.1em;">{{ paper.name }} </b>
 									<br/>
-									<i class="fa fa-user left-icon"></i><em>{% for author in paper.authors %}<a
-												{% if author.website is not none %} href="{{author.website}}" {% endif %}
+									<i class="fa fa-user left-icon"></i><em>{% for a in paper.authors %}{% assign author = site.data.authors[a] %}<a
+												{% if author.website %} href="{{author.website}}" {% endif %}
 												{% if author.is_me %} style="font-weight: bold" {% endif %}
-												>{{ author.name }}</a>{% if not loop.last %},{% endif %}
+												>{{ author.name }}</a>{% if forloop.last == false %},{% endif %}
 											{% endfor %}
 									</em>
-									{% if paper.journal is defined %}
+									{% if paper.journal %}
 									<br/>
-									<i class="fa fa-book left-icon" ></i>{{paper.journal}}{% if paper.note is not none %}, <em>{{ paper.note }}</em> {% endif %}
+									<i class="fa fa-book left-icon" ></i>{{paper.journal}}{% if paper.note %}, <em>{{ paper.note }}</em> {% endif %}
 									{% endif %}
 									<br />
 									<a href="https://arxiv.org/abs/{{paper.arxiv_id}}" class="btn btn-light"><tt><i class="far fa-file-pdf"></i> arXiv</tt></a>
-									{% if paper.journal_website is defined and paper.journal_website is not none %}
+									{% if paper.journal_website %}
 									<a href="{{paper.journal_website}}" class="btn btn-light"><tt><i class="fas fa-book"></i> journal</tt></a>
 									{% endif %}
 									{% for link in paper.other_links %}
 										<a href="{{link.url}}" class="btn btn-light">
 											<tt>
-												{% if link.icon is not none %}<i class="{{link.icon}}"></i> {% endif %}
+												{% if link.icon %}<i class="{{link.icon}}"></i> {% endif %}
 												{{link.text}}
 											</tt>
 										</a>
@@ -109,7 +112,7 @@
 								</div>
 							</div>
 						</div>
-						{% if not loop.last %}
+						{% if forloop.last == false %}
 						<div class="sep-icon">
 							<i class="fa fa-flask" style="color: lightgray"></i>
 						</div>
@@ -118,7 +121,6 @@
 					</div>
 				</div>
 				<div class="bottom-sep"></div>
-			{% endif %}
 		{% endfor %}
 		<div class="row">
 			<div class="col-md-12">
@@ -131,36 +133,7 @@
 http://wrap.warwick.ac.uk/146107">here</a>.
 			</div>
 		</div>
-		<!-- <a id="talks"></a>
-		<div style="height: 10px"></div>
-		<div class="row">
-			<div class="col-md-12">
-				<h1>Upcoming Talks</h1>
-				<hr />
-			</div>
-		</div>
-		{% for talk in talks %}
-			<div class="row">
-				<div class="col-md-12">
-					<div class="talk">
-						<span>
-							<i class="fa fa-globe left-icon"></i><b>{{talk.where}}</b>
-							{%if talk.topic is not none %}
-								({{ talk.topic }})
-							{% endif %}
-						</span>
-						<br/>
-						<i class="fa fa-calendar left-icon"></i>{{ talk.when }}
-					</div>
-				</div>
-			</div>
-			{% if not loop.last %}
-			<div class="sep-icon">
-				<i class="fa fa-microphone" style="color: lightgray"></i>
-			</div>
-			{% endif %}
-		{% endfor %}
-		<div class="bottom-sep"></div> -->
+		<div class="bottom-sep"></div>
 		<a id="software"></a>
 		<div style="height: 10px"></div>
 		<div class="row">

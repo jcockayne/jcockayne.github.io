@@ -1,0 +1,165 @@
+- title: Working
+  papers:
+    - name: A Probabilistic Taylor Expansion with Applications in Filtering and Differential Equations
+      authors:
+        - toni
+        - jon
+        - filip
+        - simo
+      arxiv_id: "2102.00877"
+    - name: Testing whether a Learning Procedure is Calibrated
+      authors:
+        - jon
+        - matt
+        - chris
+        - tim
+      arxiv_id: "2012.12670"
+    - name: BayesCG As An Uncertainty Aware Version of CG
+      authors:
+        - tim_reid
+        - ilse
+        - jon
+        - chris
+      arxiv_id: "2008.03225"
+- title: 2021
+  papers:
+    - name: Probabilistic Gradients for Fast Calibration of Differential Equation Models
+      authors:
+        - jon
+        - andrew
+      journal: SIAM Journal of Uncertainty Quantification
+      arxiv_id: "2009.04239"
+      note: to appear
+    - name: Probabilistic Iterative Methods for Linear Systems
+      authors:
+        - jon
+        - ilse
+        - chris
+        - tim_reid
+      journal: Journal of Machine Learning Research
+      arxiv_id: "2012.12615"
+      note: to appear
+    - name: Bayesian Numerical Methods for Nonlinear Partial Differential Equations
+      authors:
+        - junyang
+        - jon
+        - oksana
+        - tim
+        - chris
+      journal: Statistics and Computing
+      arxiv_id: "2104.12587"
+      journal_website: https://doi.org/10.1007/s11222-021-10030-w
+    - name: Optimal Thinning of MCMC Output
+      authors:
+        - marina
+        - wilson
+        - jon
+        - pawel
+        - steve
+        - lester
+        - chris
+      arxiv_id: "2005.03952"
+      journal: Journal of the Royal Statistical Society Series B
+      note: to appear
+- title: 2020
+  papers:
+    - name: Optimality Criteria for Probabilistic Numerical Methods
+      authors:
+        - chris
+        - jon
+        - dennis
+        - tim
+        - mark
+      arxiv_id: "1901.04326"
+      journal: Multivariate Algorithms and Information-Based Complexity
+      journal_website: https://doi.org/10.1515/9783110635461-005
+    - name: A Role for Symmetry in the Bayesian Solution of Differential Equations
+      authors:
+        - junyang
+        - jon
+        - chris
+      arxiv_id: "1906.10564"
+      journal: Bayesian Analysis
+      journal_website: https://doi.org/10.1214/19-BA1183
+- title: 2019
+  papers:
+    - name: A Bayesian Conjugate Gradient Method
+      authors:
+        - jon
+        - chris
+        - ilse
+        - mark
+      arxiv_id: "1801.05242"
+      journal: Bayesian Analysis
+      journal_website: https://doi.org/10.1214/19-BA1145
+      note: with discussion and rejoinder
+      other_links:
+        - url: https://www.youtube.com/watch?v=RDTOaPtxAXU
+          text: BA Webinar
+          icon: fab fa-youtube
+    - name: Bayesian Probabilistic Numerical Methods
+      authors:
+        - jon
+        - chris
+        - tim
+        - mark
+      arxiv_id: "1702.03673"
+      journal: SIAM Review
+      journal_website: https://doi.org/10.1137/17M1139357
+    - name: Bayesian Probabilistic Numerical Methods in Time-Dependent State Estimation for Industrial Hydrocyclone Equipment
+      authors:
+        - chris
+        - jon
+        - robert
+        - mark
+      arxiv_id: "1707.06107"
+      journal: Journal of the American Statistical Association
+      journal_website: https://doi.org/10.1080/01621459.2019.1574583
+    - name: "Probabilistic Linear Solvers: A Unifying View"
+      authors:
+        - simon
+        - jon
+        - ilse
+        - philipp
+      arxiv_id: "1810.03398"
+      journal: Statistics and Computing
+      journal_website: https://doi.org/10.1007/s11222-019-09897-7
+    - name: "Convergence Rates for a Class of Estimators Based on Stein's Method"
+      authors:
+        - chris
+        - jon
+        - fx
+        - mark
+      arxiv_id: "1603.03220"
+      journal: Bernoulli
+      journal_website: https://doi.org/10.3150/17-BEJ1016
+- title: 2017
+  papers:
+    - name: On the Sampling Problem for Kernel Quadrature
+      authors:
+        - fx
+        - chris
+        - jon
+        - wilson
+        - mark
+      arxiv_id: "1706.03369"
+      journal: Proceedings of the 34th International Conference on Machine Learning
+      journal_website: http://proceedings.mlr.press/v70/briol17a.html
+    - name: On the Bayesian Solution of Differential Equations
+      authors:
+        - junyang
+        - jon
+        - chris
+      arxiv_id: "1805.07109"
+      journal: Proceedings of the 38th International Workshop on Bayesian Inference and Maximum Entropy Methods in Science and Engineering
+- title: 2016
+  papers:
+    - name: Probabilistic Numerical Methods for PDE-Constrained Bayesian Inverse Problems
+      authors:
+        - jon
+        - chris
+        - tim
+        - mark
+      arxiv_id: 1701.04006
+      journal: Proceedings of the 38th International Workshop on Bayesian Inference and Maximum Entropy Methods in Science and Engineering
+      journal_website: https://aip.scitation.org/doi/abs/10.1063/1.4985359

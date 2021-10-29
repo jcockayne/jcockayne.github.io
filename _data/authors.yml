@@ -1,0 +1,69 @@
+jon: 
+  is_me: true
+  name: Jon Cockayne
+chris:
+  name: Chris Oates
+  website: https://oates.work
+ilse:
+  name: Ilse Ipsen
+  website: https://ipsen.math.ncsu.edu
+mark:
+  name: Mark Girolami
+  website: https://www.turing.ac.uk/people/programme-directors/mark-girolami
+tim:
+  name: Tim Sullivan
+  website: http://www.tjsullivan.org.uk/
+robert:
+  name: Robert Aykroyd
+  website: http://www1.maths.leeds.ac.uk/~robert/
+simon:
+  name: Simon Bartels
+  website: https://di.ku.dk/english/staff/?pure=en/persons/675431
+philipp:
+  name: Philipp Hennig
+  website: http://mml.inf.uni-tuebingen.de
+fx:
+  name: Francois-Xavier Briol
+  website: https://fxbriol.github.io/
+junyang:
+  name: Junyang Wang
+  website: https://www.turing.ac.uk/node/1982
+dennis:
+  name: Dennis Prangle
+  website: https://dennisprangle.github.io/
+wilson:
+  name: Wilson Chen
+  website: https://github.com/wilson-ye-chen
+marina:
+  name: Marina Riabiz
+  website: https://www.kcl.ac.uk/people/marina-riabiz
+pawel:
+  name: Pawel Swietach
+  website: https://www.dpag.ox.ac.uk/team/pawel-swietach
+steve:
+  name: Steven Niederer
+  website: https://www.kcl.ac.uk/people/steven-niederer
+lester:
+  name: Lester Mackey
+  website: https://web.stanford.edu/~lmackey/
+tim_reid:
+  name: Tim Reid
+  website: https://math.sciences.ncsu.edu/people/twreid/
+andrew:
+  name: Andrew Duncan
+  website: http://wwwf.imperial.ac.uk/~aduncan/
+matt:
+  name: Matthew Graham
+  website: https://matt-graham.github.io
+toni:
+  name: Toni Karvonen
+  website: https://tskarvone.github.io/
+filip:
+  name: Filip Tronarp
+  website: https://scholar.google.fi/citations?user=q0rtB0EAAAAJ&hl=sv
+simo:
+  name: Simo Särkkä
+  website: https://users.aalto.fi/~ssarkka/
+oksana: 
+  name: Oksana Chkrebtii
+  website: https://www.asc.ohio-state.edu/chkrebtii.1/research.html
