@@ -1,5 +1,12 @@
 - title: Working
-  papers:
+  papers:    
+    - name: Theoretical Guarantees for the Statistical Finite Element Method
+      authors:
+        - yanni
+        - jon
+        - mark
+        - andrew
+      arxiv_id: "2111.07691"
     - name: A Probabilistic Taylor Expansion with Applications in Filtering and Differential Equations
       authors:
         - toni
