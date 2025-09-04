@@ -1,12 +1,56 @@
 - title: Working
   papers:    
-    - name: Theoretical Guarantees for the Statistical Finite Element Method
+    - name: Constructive Disintegration and Conditional Modes
+      authors:
+        - nathael
+        - marvin
+        - jon
+      arxiv_id: "2508.00617"
+- title: 2025
+  papers:
+    - name: "Learning to Solve Related Linear Systems"
+      authors:
+        - disha
+        - jon
+      arxiv_id: "2503.17265"
+      journal: Proceedings of the First International Conference on Probabilistic Numerics
+      journal_website: "https://proceedings.mlr.press/v271/hegde25a.html"
+    - name: "Randomised Postiterations for Calibrated BayesCG"
+      authors:
+        - niall
+        - disha
+        - jon
+      arxiv_id: "2504.04247"
+      journal: Proceedings of the First International Conference on Probabilistic Numerics
+      journal_website: "https://proceedings.mlr.press/v271/vyas25a.html"
+    - name: "Calibrated Computation-Aware Gaussian Processes"
+      authors:
+        - disha
+        - adil
+        - jon
+      journal: AISTATS 2025
+      arxiv_id: "2410.08796"
+      journal_website: https://proceedings.mlr.press/v258/hegde25a.html
+    - name: Computation-Aware Kalman Filtering and Smoothing
+      authors:
+        - marvin
+        - jon_wenger
+        - jon
+        - philipp
+      journal: AISTATS 2025
+      journal_website: https://proceedings.mlr.press/v258/pfortner25a.html
+      arxiv_id: "2405.08971"
+- title: 2023
+  papers:
+    - name: "Theoretical Guarantees for the Statistical Finite Element Method"
       authors:
         - yanni
         - jon
         - mark
         - andrew
       arxiv_id: "2111.07691"
+      doi: 10.1137/21M1463963
+      journal: SIAM Journal of Uncertainty Quantification
     - name: A Probabilistic Taylor Expansion with Applications in Filtering and Differential Equations
       authors:
         - toni
@@ -14,20 +58,37 @@
         - filip
         - simo
       arxiv_id: "2102.00877"
+      journal: Transactions of Machine Learning Research
+    - name: "Statistical Properties of BayesCG Under the Krylov Prior"
+      authors:
+        - tim_reid
+        - ilse
+        - jon
+        - chris
+      arxiv_id: "2208.03885"
+      journal: "Numerische Mathematik"
+      doi: "10.1007/s00211-023-01375-7"
+- title: 2022
+  papers:
     - name: Testing whether a Learning Procedure is Calibrated
       authors:
         - jon
         - matt
         - chris
         - tim
+      journal: Journal of Machine Learning Research
       arxiv_id: "2012.12670"
-    - name: BayesCG As An Uncertainty Aware Version of CG
+      journal_website: "https://jmlr.org/papers/v23/21-1065.html"
+    - name: Radiative Transfer as a Bayesian Linear Regression Problem
       authors:
-        - tim_reid
-        - ilse
+        - frederik
+        - thomas
         - jon
-        - chris
-      arxiv_id: "2008.03225"
+        - leen
+        - jeremy
+      journal: "Monthly Notices of the Royal Astronomical Society"
+      arxiv_id: "2211.12547"
+      doi: 10.1093/mnras/stac3461
 - title: 2021
   papers:
     - name: Probabilistic Gradients for Fast Calibration of Differential Equation Models
@@ -36,7 +97,7 @@
         - andrew
       journal: SIAM Journal of Uncertainty Quantification
       arxiv_id: "2009.04239"
-      note: to appear
+      doi: "10.1137/20M1364424"
     - name: Probabilistic Iterative Methods for Linear Systems
       authors:
         - jon
@@ -45,7 +106,7 @@
         - tim_reid
       journal: Journal of Machine Learning Research
       arxiv_id: "2012.12615"
-      note: to appear
+      journal_website: https://jmlr.org/papers/v22/21-0031.html
     - name: Bayesian Numerical Methods for Nonlinear Partial Differential Equations
       authors:
         - junyang
@@ -67,9 +128,16 @@
         - chris
       arxiv_id: "2005.03952"
       journal: Journal of the Royal Statistical Society Series B
-      note: to appear
+      doi: 10.1111/rssb.12503
 - title: 2020
   papers:
+    - name: BayesCG As An Uncertainty Aware Version of CG
+      authors:
+        - tim_reid
+        - ilse
+        - jon
+        - chris
+      arxiv_id: "2008.03225"
     - name: Optimality Criteria for Probabilistic Numerical Methods
       authors:
         - chris
