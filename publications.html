@@ -1,0 +1,81 @@
+---
+layout: default
+title: Jon Cockayne - Publications
+---
+
+<div style="height: 50px"></div>
+		<div class="row">
+			<div class="col-md-12">
+				<h1>
+					Publications
+				</h1>
+				<hr />
+			</div>
+		</div>
+		{% for group in site.data.papers %}
+				<div class="row">
+					<div class="col-md-2 d-none d-md-block" >
+						<h3 class="year-label" style="width: 100%; text-align:right">{{group.title}}</h3>
+					</div>
+					<div class="col-md-2 d-md-none">
+						<h3 style="width: 100%">{{group.title}}</h3>
+					</div>
+					<div class="col-md-10">
+					{% for paper in group.papers %}
+						<div class="row">
+							<div class="col-md-12">
+								<div class="paper">
+									<b style="font-size: 1.1em;">{{ paper.name }} </b>
+									<br/>
+									<i class="fa fa-user left-icon"></i><em>{% for a in paper.authors %}{% assign author = site.data.authors[a] %}<a
+												{% if author.website %} href="{{author.website}}" {% endif %}
+												{% if author.is_me %} style="font-weight: bold" {% endif %}
+												>{{ author.name }}</a>{% if forloop.last == false %},{% endif %}
+											{% endfor %}
+									</em>
+									{% if paper.journal %}
+									<br/>
+									<i class="fa fa-book left-icon" ></i>{{paper.journal}}{% if paper.note %}, <em>{{ paper.note }}</em> {% endif %}
+									{% endif %}
+									<br />
+									<a href="https://arxiv.org/abs/{{paper.arxiv_id}}" class="btn btn-light"><tt><i class="far fa-file-pdf"></i> arXiv</tt></a>
+									{% if paper.doi %}
+									<a href="{{paper.doi}}" class="btn btn-light"><tt><i class="fas fa-book"></i> DOI</tt></a>
+									{% endif %}
+
+									{% if paper.journal_website %}
+									<a href="{{paper.journal_website}}" class="btn btn-light"><tt><i class="fas fa-book"></i> journal</tt></a>
+									{% endif %}
+									{% for link in paper.other_links %}
+										<a href="{{link.url}}" class="btn btn-light">
+											<tt>
+												{% if link.icon %}<i class="{{link.icon}}"></i> {% endif %}
+												{{link.text}}
+											</tt>
+										</a>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+						{% if forloop.last == false %}
+						<div class="sep-icon">
+							<i class="fa fa-flask" style="color: lightgray"></i>
+						</div>
+						{% endif %}
+					{% endfor %}
+					</div>
+				</div>
+				<div class="bottom-sep"></div>
+		{% endfor %}
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Thesis</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				My PhD was awarded by the University of Warwick in 2019. The title of my thesis was <i>Probabilistic Numerical Methods</i>; it can be found <a href="
+http://wrap.warwick.ac.uk/146107">here</a>.
+			</div>
+		</div>
+		<div class="bottom-sep"></div>

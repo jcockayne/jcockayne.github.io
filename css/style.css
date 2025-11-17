@@ -9,6 +9,11 @@ h1 {
 	font-family: 'Catamaran', sans-serif;
 	font-weight: bold;
 	font-size: 3.5rem;
+	margin-top: 40px;
+}
+
+h2{
+	margin-top: 40px;
 }
 
 h3 {
