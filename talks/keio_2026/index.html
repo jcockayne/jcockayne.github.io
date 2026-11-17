@@ -745,9 +745,9 @@ m_h=m+KD_h^\top A_h^{-1}(f_X-D_hm)
 <p><span class="math display">\[
 K_h=K-KD_h^\top A_h^{-1}D_hK
 \]</span></p>
-</div>
 <div class="small">
-<p><span class="math inline">\(R_h=C^2h^{2\tau}I\)</span>. Both posterior quantities require solves with <span class="math inline">\(A_h\)</span>.</p>
+<p><span class="math inline">\(R_h=C^2h^{2\tau}I\)</span>.</p>
+</div>
 </div>
 <aside class="notes">
 <ul>
@@ -945,6 +945,9 @@ r_{2h}=D_{2h}\bigl(u_h|_{X_{2h}}\bigr)-f_{2h}
 \mathbb E\!\left[\|U-u\|_X^2\mid f_X\right]
 =O\!\left(h^{2\min(\tau,b)}\right)
 \]</span></p>
+<div class="fragment">
+<p>Compared to the error in the underyling numerical method (<span class="math inline">\(\mathcal{O}(h^b)\)</span>):</p>
+</div>
 <ul>
 <li class="fragment"><span class="math inline">\(\tau&lt;b\)</span>: the error model limits the contraction rate.</li>
 <li class="fragment"><span class="math inline">\(\tau=b\)</span>: recovers the deterministic method’s RMS rate.</li>
@@ -976,7 +979,10 @@ r_{2h}=D_{2h}\bigl(u_h|_{X_{2h}}\bigr)-f_{2h}
 </div>
 <aside class="notes">
 <ul>
+<li>Top row: error from the numerical method dominates, then matches.</li>
+<li>Bottom row: error model dominates.</li>
 <li>Clearest rate agreement: tau = 2 and 3.</li>
+<li>A strange choice in any case to use a dominant error model.</li>
 <li>This does not test the estimated scale or calibration.</li>
 </ul>
 <style type="text/css">
@@ -1052,7 +1058,7 @@ r_{2h}=D_{2h}\bigl(u_h|_{X_{2h}}\bigr)-f_{2h}
 <ul>
 <li>Reduced fidelity can reduce cost - but only if quantified.</li>
 <li>Methods based on operator approximation provide a route to tackling nonlinear problems.</li>
-<li><strong>Next:</strong> propagate solution uncertainty to the tracer observable and current inference.</li>
+<li><strong>Next:</strong> scaling up to more physically meaningful PDEs.</li>
 </ul>
 <aside class="notes">
 
