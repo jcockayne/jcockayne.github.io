@@ -2138,7 +2138,7 @@ display:block!important;
 <p>Disha Hegde, PhD thesis, §3.10.1.2.</p>
 </div>
 <aside class="notes">
-<p>Both traces follow the same solver routine. For a fixed sequence of steps whose coefficients are independent of the inputs, tracing the composed routine in <span class="math inline">b</span> would give the accumulated <span class="math inline">\overline{M}_i</span> from the inverse-prior slide. We will use the individual steps so we can update the downdate as we iterate.</p>
+<p>We hold <span class="math inline">A</span> and the step coefficients fixed as we vary <span class="math inline">x</span> or <span class="math inline">b</span>. The step is affine in those inputs, so the changes we trace are exact. Tracing the composed routine in <span class="math inline">b</span> would give the accumulated <span class="math inline">\overline{M}_i</span> from the inverse-prior slide. We will use the individual steps so we can update the downdate as we iterate.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -2175,6 +2175,7 @@ display:block!important;
 </div></div>
 <aside class="notes">
 <p>The triangular solve applies <span class="math inline">L^{-1}</span> to the change in its input. This same <span class="math inline">G</span> propagates uncertainty through one step as <span class="math inline">G\Sigma G^\top</span>.</p>
+<p>We run the same solver code twice, first with a symbolic iterate and then with a symbolic right-hand side. Each run records the operations on that input, giving us code that applies <span class="math inline">G</span> or <span class="math inline">M</span>.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
